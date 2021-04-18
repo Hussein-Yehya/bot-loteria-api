@@ -14,10 +14,13 @@ import java.util.Objects;
 @Log4j2
 public class BotService {
 
-    public GameDTO gamesGenerator(final int amountOfGames, final String name, final Integer amountOfNumbers){
+    public GameDTO gamesGenerator(final int amountOfGames, final String name, Integer amountOfNumbers){
         GameEnum gameEnum = GameEnum.identifyRule(name);
 
-        if (Objects.isNull(gameEnum) || Objects.isNull(amountOfNumbers) || validateAmountNumbersByGame(gameEnum, amountOfNumbers)){
+        if (Objects.isNull(amountOfNumbers))
+            amountOfNumbers = gameEnum.getMinimumNumber();
+
+        if (Objects.isNull(gameEnum) || validateAmountNumbersByGame(gameEnum, amountOfNumbers)){
             log.info("Wow, it looks like there's something wrong");
             return null;
         }
@@ -28,4 +31,5 @@ public class BotService {
     private boolean validateAmountNumbersByGame(GameEnum gameEnum, int amountOfNumbers){
         return amountOfNumbers > gameEnum.getMaximumNumber() || amountOfNumbers < gameEnum.getMinimumNumber();
     }
+
 }
