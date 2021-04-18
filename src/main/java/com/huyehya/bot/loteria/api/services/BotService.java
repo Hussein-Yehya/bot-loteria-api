@@ -16,10 +16,12 @@ public class BotService {
 
     public GameDTO gamesGenerator(final int amountOfGames, final String name, final Integer amountOfNumbers){
         GameEnum gameEnum = GameEnum.identifyRule(name);
-        if (Objects.isNull(gameEnum) || validateAmountNumbersByGame(gameEnum, amountOfNumbers)){
+
+        if (Objects.isNull(gameEnum) || Objects.isNull(amountOfNumbers) || validateAmountNumbersByGame(gameEnum, amountOfNumbers)){
             log.info("Wow, it looks like there's something wrong");
             return null;
         }
+
         return gameEnum.getRule().generator(amountOfGames, amountOfNumbers);
     }
 
