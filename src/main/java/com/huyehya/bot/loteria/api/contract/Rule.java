@@ -4,5 +4,5 @@ import com.huyehya.bot.loteria.api.DTOs.GameDTO;
 
 public interface Rule {
 
-    public GameDTO generator(final int amountOfGames);
+    public GameDTO generator(final int amountOfGames, final int amountOfNumbers);
 }

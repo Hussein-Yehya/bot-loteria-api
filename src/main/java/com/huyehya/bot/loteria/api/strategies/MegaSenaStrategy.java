@@ -13,14 +13,14 @@ import static com.huyehya.bot.loteria.api.DTOs.GameEnum.MEGASENA;
 public class MegaSenaStrategy implements Rule {
 
     @Override
-    public GameDTO generator(final int amountOfGames){
+    public GameDTO generator(final int amountOfGames, final int amountOfNumbers){
         Random random = new Random();
         Set<Integer> results;
         Set<CombinationDTO> combinationDTOS = new HashSet<>();
 
         for (int quantity = 1; quantity <= amountOfGames; quantity++){
             results = new HashSet<>();
-            while(results.size() <= 5){
+            while(results.size() < amountOfNumbers){
                 final int number = random.nextInt(MEGASENA.getTotalNumber()) + 1;
                 results.add(number);
             }

@@ -16,14 +16,14 @@ public class BotService {
 
     public GameDTO gamesGenerator(final int amountOfGames, final String name, final Integer amountOfNumbers){
         GameEnum gameEnum = GameEnum.identifyRule(name);
-
-        if (Objects.isNull(gameEnum)){
-            log.info("No games defined");
+        if (Objects.isNull(gameEnum) || validateAmountNumbersByGame(gameEnum, amountOfNumbers)){
+            log.info("Wow, it looks like there's something wrong");
             return null;
         }
+        return gameEnum.getRule().generator(amountOfGames, amountOfNumbers);
+    }
 
-        final GameDTO generator = gameEnum.getRule().generator(amountOfGames);
-        System.out.println(generator);
-        return generator;
+    private boolean validateAmountNumbersByGame(GameEnum gameEnum, int amountOfNumbers){
+        return amountOfNumbers > gameEnum.getMaximumNumber() || amountOfNumbers < gameEnum.getMinimumNumber();
     }
 }
