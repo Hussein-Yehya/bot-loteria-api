@@ -1,10 +1,7 @@
 
 q
-java:S1128"ORemove this unused import 'com.fasterxml.jackson.core.JsonProcessingException'.(ßÔïÇûÿÿÿÿ8¾àìë‹/
-h
-java:S1128"FRemove this unused import 'com.huyehya.bot.loteria.api.contract.Rule'.(ÂÈ²“şÿÿÿÿ8€Ûé‹/
+java:S1128"ORemove this unused import 'com.fasterxml.jackson.core.JsonProcessingException'.(ßÔïÇûÿÿÿÿ8Î€ù–/
 S
-java:S1128"6Remove this unused import 'lombok.extern.log4j.Log4j'.(ñÔêĞ8Şáó½Œ/
-X
-java:S1172"6Remove this unused method parameter "amountOfNumbers".(â“¦±úÿÿÿÿ8îá†¾Œ/
-U	java:S106"9Replace this use of System.out or System.err by a logger.(²ÈÒœ8Ğ¦‘é‹/
+java:S1128"6Remove this unused import 'lombok.extern.log4j.Log4j'.(ñÔêĞ8Î€ù–/
+h
+java:S1128"FRemove this unused import 'com.huyehya.bot.loteria.api.contract.Rule'.(ÂÈ²“şÿÿÿÿ8Î€ù–/

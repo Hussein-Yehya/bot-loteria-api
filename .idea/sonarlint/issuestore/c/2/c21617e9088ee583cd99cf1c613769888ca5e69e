@@ -1,7 +1,7 @@
 
+Z
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8™¢ð–Ž/
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹¿è½úÿÿÿÿ8™¢ð–Ž/
 M
 java:S1128
-"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8£Î¦é‹/
-Z
-java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8å×©é‹/
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹¿è½úÿÿÿÿ
+"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8™¢ð–Ž/
